@@ -7,7 +7,8 @@ class PhoneNumberValidator
 
   def valid?(value)
     return false if value.starts_with?("0")
-
-    validator.plausible?(value)
+    # To drop Phone number validation - Accept Extensions
+    return true
+    # validator.plausible?(value)
   end
 end

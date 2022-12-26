@@ -1,10 +1,12 @@
 module TwilioAPI
   class PhoneCallsController < TwilioAPIController
     def index
+      puts "PhoneCallsController Index"
       respond_with(phone_calls_scope, serializer_options)
     end
 
     def create
+      puts "PhoneCallsController Create"
       validate_request_schema(
         with: PhoneCallRequestSchema,
         schema_options: { account: current_account },
